@@ -1,0 +1,11 @@
+#!/bin/tcsh -f
+# Hanshi Zuo
+# Project 2 script 2
+# Outputing census data for a given list of
+# counties
+#
+
+foreach item ($argv[*]:q)
+   proj02.script1 $item
+   echo '\n'
+end

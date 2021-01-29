@@ -1,0 +1,10 @@
+#!/bin/tcsh -f
+#
+# Hanshi Zuo
+# Project 2 script 1
+# Outputing census data for a given county
+#
+
+echo "Census data for $* county"
+cat /user/cse325/Projects/project02.headers
+grep "| .*$*" /user/cse325/Projects/project02.data | sort -k3,3n -k1,1 -t'|'

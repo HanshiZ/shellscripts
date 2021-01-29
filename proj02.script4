@@ -1,0 +1,17 @@
+#!/bin/tcsh -f
+#  Hanshi Zuo
+#  Project 2 script 4
+#  List the most populated areas of Michigan
+#  with error checking
+
+set isint = `expr match "$1" '^[+0-9]*$'`
+
+if ($#argv != 2) then
+   echo 'Please enter exactly 2 arguments, integer number of lines and mode.' 
+else if ($isint == 0 ||  $1 == 0) then
+   echo 'Please enter a positive (> 0) integer number of lines to show.'
+else if ("$2" == 'A' || "$2" == 'T' || "$2" == 'C') then
+   proj02.script3 $*
+else 
+   echo 'Please enter valid mode as second argument (A,C,T)'
+endif
